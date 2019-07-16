@@ -1,0 +1,15 @@
+prompt
+
+intro fabien
+
+bout de code -> 
+
+show text
+
+bout cde -> bouton 
+
+bouton avancer dans un nouvel écran
+
+--> ( qui je suis / ce que je fais / mécrire ) 3boutons
+
+bout de code qui se fait, push git -> déploiement -> affichage de ma page avec mon profil
