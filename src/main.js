@@ -1,6 +1,7 @@
 import './scss/style.scss';
-(function() {
 
+(function() {
+var speed=10;
 var addSpan= function(container,letter){
   if(letter==="\n"){
     var node = document.createElement("br");
@@ -30,7 +31,7 @@ var showAWordLikeItIsWritingByAHuman = function (container,text){
 }
 
 var getRandomTimer=function(){
-  return getRandomArbitrary(50,150);
+  return getRandomArbitrary(50,150)/speed;
 }
 
 var getRandomArbitrary=function(min, max) {
@@ -39,9 +40,14 @@ var getRandomArbitrary=function(min, max) {
 
 var container =document.querySelector(".container-title-prompt");
 var butttonContainer = document.querySelector(".button-start-server-container");
+var butttonCircle = document.querySelector(".button-start-server-circle");
 
 var showButtonStartServer= function(){
-    butttonContainer.classList.add("button-start-server-container-show");
+    setTimeout(function(){
+      butttonContainer.classList.add("button-start-server-container-show");
+      butttonCircle.classList.add("button-start-server-color");
+  },500/speed);
+
 }
 
 var text ="\nHello newcomer \nLet's start the server?";
