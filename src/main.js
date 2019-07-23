@@ -1,3 +1,4 @@
+import './scss/style.scss';
 (function() {
 
 var addSpan= function(container,letter){
@@ -17,6 +18,9 @@ var asyncAddSpan=function(container,text,iterator){
     if(iterator<text.length-1){
       asyncAddSpan(container,text,iterator+1)
     }
+    else{
+      showButtonStartServer()
+    }
   }, getRandomTimer());
 }
 
@@ -34,8 +38,13 @@ var getRandomArbitrary=function(min, max) {
 }
 
 var container =document.querySelector(".container-title-prompt");
+var butttonContainer = document.querySelector(".button-start-server-container");
 
-var text ="Hello newcomer \nDo you want to know me?";
+var showButtonStartServer= function(){
+    butttonContainer.classList.add("button-start-server-container-show");
+}
+
+var text ="\nHello newcomer \nLet's start the server?";
 
 setTimeout(()=> {
   showAWordLikeItIsWritingByAHuman(container,text);
